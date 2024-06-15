@@ -61,6 +61,10 @@ void RenderRectProgress(float fProgress, LPDIRECT3DDEVICE9 renderDevice)
 			{ 1.0f, { fSX - fWidth + fWidth * ((fProgress - 0.875f) / 0.125f), fSY - fHeight } }
 		};
 
+		//fProgress = 1.0f - fProgress; // quando faço isso, o progresso ele fica no sentido anti-horário e faz o que eu quero, 
+		//que é iniciar preenchido e se desfazer durante o tempo, eu preciso fazer isso mas no sentido horario, no sentido horario
+		//ele inicia vazio e vai se preenchendo
+
 		for (const auto&& [i, it] : std::ranges::enumerate_view(mapProgress))
 		{
 			if (fProgress <= it.first)
