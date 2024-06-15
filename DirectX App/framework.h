@@ -11,6 +11,8 @@
 #include <iostream>
 #include <chrono>
 #include <timeapi.h>
+#include <map>
+#include <ranges>
 
 #include "resource.h"
 
